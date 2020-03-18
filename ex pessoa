@@ -1,0 +1,70 @@
+public class pessoa {
+	private String Nome;
+	private String Endereco;
+	private String Tel;
+	private String Email;
+	private String RG;
+	
+	public pessoa(String Nome, String Endereco, String Tel, String Email, String RG ){
+		this.Nome = Nome;
+		this.Endereco = Endereco;
+		this.Tel = Tel;	
+		this.Email = Email;
+		this.RG = RG;
+	}
+	public String getNome(){
+		return Nome;
+	}
+	public void setNome(String Nome){
+		this.Nome = Nome;
+	}
+	public String getEndereco(){
+		return Endereco;
+	}
+	public void setEndereco(String Endereco){
+		this.Endereco = Endereco;
+	}
+	public String getTel(){
+		return Tel;
+	}
+	public void setTel(String Tel){
+		this.Tel = Tel;
+	}
+	public String getEmail(){
+		return Email;
+	}
+	public void setEmail(String Email){
+		this.Email = Email;
+	}
+	public String getRG(){
+		return RG;
+	}
+	public void setRG(String RG){
+		this.RG = RG;
+	}
+	public void apresentarPessoa(){
+		System.out.println("Nome: " + this.getNome());
+		System.out.println("Endereço: " + this.getEndereco());
+		System.out.println("Telefone: " + this.getTel());
+		System.out.println("Email: " + this.getEmail());
+		System.out.println("RG: " + this.getRG());
+	}
+}
+
+import java.util.*;
+public class Principal {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		pessoa p1 = new pessoa("Endryl","Etec Ct","96432864","endryl.contato@gmail.com","354684861");	
+		p1.apresentarPessoa();
+		System.out.println("--------------------------------------------------------------");
+		pessoa p2 = new pessoa("Yuri","Etec Ct","96432864","bolivia@gmail.com","354684861");	
+		p2.apresentarPessoa();
+		System.out.println("--------------------------------------------------------------");
+		pessoa p3 = new pessoa("João","Etec Ct","96432864","Cearence@gmail.com","354684861");	
+		p3.apresentarPessoa();
+		System.out.println("--------------------------------------------------------------");
+		pessoa p4 = new pessoa("Davi","Etec Ct","96432864","YasuoPassivaSecreta0/10@gmail.com","354684861");	
+		p4.apresentarPessoa();
+	}
+}
