@@ -1,0 +1,477 @@
+QUADRADO
+package Area;
+public class Conta {
+	double B;
+		//Base do quadrado.
+	double Al;
+		//Altura do Quadrado.
+	double area;
+		//Variavel para guardar o calculo de Base * Altura.
+		//Declarando as variaveis.
+	
+	void area(){
+		area = B * Al;
+		//Dentro deste método, estou fazendo o cálculo da Area do quadrado .
+	}
+}
+--------------------------------------------------------------------------
+package Area;
+public class Apresentar {
+	public static void main(String[] args) {
+		Conta Quadrado1 = new Conta();
+			//No trecho acima estou criando minha 1º instancia.
+		Quadrado1.Al = 4.5;
+			//Estou acrescentando um valor a minha variavel.
+		Quadrado1.B = 9.5;
+			//Estou acrescentando um valor a minha variavel.
+		Quadrado1.area();
+		
+		System.out.println("A área do Quadrado 1 é: " + Quadrado1.area);
+			//Apresentando o Resultado do calculo.
+		
+		Conta Quadrado2 = new Conta();
+			//No trecho acima estou criando minha 2º Instancia.
+		Quadrado2.Al = 4.6;
+			//Estou acrescentando um valor a minha variavel.
+		Quadrado2.B = 10;
+			//Estou acrescentando um valor a minha variavel.
+		Quadrado2.area();
+		
+		System.out.println("A área do Quadrado 2 é: " + Quadrado2.area);
+			//Apresentando o Resultado do calculo.
+	}
+}
+--------------------------------------------------------------------------
+CALCULADORA
+package exercicios;
+public class calculation {
+	double a;
+	double b;
+	double Soma;
+	double Subtracao;
+	double Multiplicacao;
+	double Divisao;
+	
+		void Divisao (){	
+			Divisao = a / b;
+		}
+		void Multiplicacao (){
+			Multiplicacao = a * b;
+		}
+		void Subtracao (){	
+			Subtracao = a - b;
+		}
+		void Soma (){
+			Soma = a + b;
+	}
+}
+--------------------------------------------------------------------------
+package exercicios;
+import java.util.*;
+public class Calculadora {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		calculation Calcular = new calculation();
+		double b, a;
+		
+		System.out.println("Digite o primeiro parâmetro: ");
+		a = in.nextDouble();
+		
+		System.out.println("Digite o segundo parâmetro: ");
+		b = in.nextDouble();
+		
+		Calcular.a = a;
+		Calcular.b = b;
+		Calcular.Soma();
+		Calcular.Subtracao();
+		Calcular.Multiplicacao();
+		Calcular.Divisao();
+		
+		System.out.println(Calcular.a+" + "+Calcular.b+" = "+Calcular.Soma);
+		System.out.println(Calcular.a+" - "+Calcular.b+" = "+Calcular.Subtracao);
+		System.out.println(Calcular.a+" * "+Calcular.b+" = "+Calcular.Multiplicacao);
+		System.out.println(Calcular.a+" / "+Calcular.b+" = "+Calcular.Divisao);
+		
+	}
+}
+--------------------------------------------------------------------------
+IDADE
+package exercicios;
+import java.util.Scanner;
+public class idades {
+	public static void main(String[] args) {
+		idade calculo = new idade();
+		Scanner in = new Scanner(System.in);
+		String nome;
+		String Sobrenome;
+		int at, an;
+		System.out.println("Digite seu nome: ");
+		nome=in.next();
+		System.out.println("Digite seu sobrenome");
+		Sobrenome=in.next();
+		System.out.println("Digite ano atual: ");
+		at=in.nextInt();
+		System.out.println("Digite ano de nascimento: ");
+		an=in.nextInt();
+		
+		calculo.at = at;
+		calculo.an = an;
+		calculo.idade();
+		
+		System.out.println("Você tem "+calculo.idade+" anos e seu nome completo é "+calculo.nomeCompleto());
+	}
+}
+--------------------------------------------------------------------------
+package exercicios;
+
+public class idade {
+	int idade;
+	String nome;
+	String Sobrenome;
+	int at;
+	int an;
+	
+	void idade(){
+		idade = at - an;
+	}
+	String nomeCompleto(){
+		String n = nome + Sobrenome;
+		return n;
+	}
+}
+--------------------------------------------------------------------------
+TRIANGULO RETANGULO
+package exercicios;
+import java.util.*;
+public class Apresentacao {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		double b, h;
+		TrianguloRetangulo Calculo = new TrianguloRetangulo();
+		System.out.println("Qual a base do Retângulo: ");
+		b = in.nextDouble();
+		System.out.println("Qual a altura do Retângulo: ");
+		h = in.nextDouble();
+		Calculo.b = b;
+		Calculo.h = h;
+		Calculo.area1();
+		System.out.println("A area do retângulo é: "+ Calculo.area1);
+		Calculo.area1();
+		
+		System.out.println("Qual a base do Triangulo: ");
+		b = in.nextDouble();
+		System.out.println("Qual a altura do Triangulo: ");
+		h = in.nextDouble();
+		Calculo.b = b;
+		Calculo.h = h;
+		Calculo.area2();
+		System.out.println("A area do triangulo é: "+ Calculo.area2);
+		Calculo.area2();
+	}
+		
+}
+--------------------------------------------------------------------------	
+package exercicios;
+public class TrianguloRetangulo {
+	double area1;
+	double area2;
+	double b;
+	double h;
+	
+	void area1(){
+		area1 = b * h;
+	}
+	void area2(){
+		area2 = b * h / 2 ;
+	}
+	//A = b . h
+	//b*h/2
+}
+--------------------------------------------------------------------------
+FUNCIONARIOS
+package exercicios;
+public class Funcionarios {
+	public static void main(String[] args) {
+		 salario F1 = new  salario();
+		F1.Nome = "Pedro";
+		F1.SB = 3891.05;
+		F1.Imposto = 636.13;
+		F1.sL();
+		F1.aS(200);
+			//Acrescentando dados dentro das váriaveis.
+		
+		System.out.println("O sálario Líquido de " + F1.Nome + " é de: " + F1.sL + " e seu sálario com o aumento vai ficar: "+ F1.aU);
+			//Apresentando os Resultados dos calculos dentro dos métodos na class Funcionario.
+		
+		salario F2 = new salario();
+		F2.Nome = "Vagner";
+		F2.SB = 5000;
+		F2.Imposto = 869.36;
+		F2.sL();
+		F2.aS(300);
+			//Acrescentando dados dentro das váriaveis.
+		
+		System.out.println("O sálario Líquido de " + F2.Nome + " é de: " + F2.sL + " e seu sálario com o aumento vai ficar: "+ F2.aU);
+			//Apresentando os Resultados dos calculos dentro dos métodos na class Funcionario.
+	}
+}
+--------------------------------------------------------------------------
+package exercicios;
+public class salario {
+	String Nome;
+		//nome do Funcionario.
+	double SB;
+		//Sálario Bruto do Funcionario.
+	double Imposto;
+		//Imposto de renda do Funcionario.
+	double sL;
+		//Sálario Líquido do Funcionario.
+	double aU;
+		//Aumento do Funcionario.
+	
+	void sL(){
+		if(SB < 1903.98){
+			if(Imposto == 0){
+				sL = SB - Imposto;
+			}else{
+				System.out.println("Seu valor do sálario ou valor do imposto está errado.");
+			}
+		}else if(SB >= 1903.98 && SB <= 2826.65){
+			if(Imposto == 142.80){
+				sL = SB - Imposto;
+			}else{
+				System.out.println("Seu valor do sálario ou valor do imposto está errado.");
+			}
+		}else if(SB > 1903.98 && SB <= 3751.05){
+			if(Imposto == 354.80){
+				sL = SB - Imposto;
+			}else{
+				System.out.println("Seu valor do sálario ou valor do imposto está errado.");
+			}
+		}else if(SB > 3751.05 && SB <= 4664.68){
+			if(Imposto == 636.13){
+				sL = SB - Imposto;
+			}else{
+				System.out.println("Seu valor do sálario ou valor do imposto está errado.");
+			}
+		}else if(SB > 4664.68){
+			if(Imposto == 869.36){
+				sL = SB - Imposto;
+			}else{
+				System.out.println("Seu valor do sálario ou valor do imposto está errado.");
+			}
+		}
+	}
+		//Método para calcular o valor do sálario Líquido com o calculo: Sálario Bruto - Imposto.
+	
+	void aS(double aS){
+		aU = sL + aS;
+	}
+		//Método criado com uma codição declarando uma váriavel chamada Aumento Sálario.
+}
+PESSOA
+public class pessoa {
+	private String Nome;
+	private String Endereco;
+	private String Tel;
+	private String Email;
+	private String RG;
+	
+	public pessoa(String Nome, String Endereco, String Tel, String Email, String RG ){
+		this.Nome = Nome;
+		this.Endereco = Endereco;
+		this.Tel = Tel;	
+		this.Email = Email;
+		this.RG = RG;
+	}
+	public String getNome(){
+		return Nome;
+	}
+	public void setNome(String Nome){
+		this.Nome = Nome;
+	}
+	public String getEndereco(){
+		return Endereco;
+	}
+	public void setEndereco(String Endereco){
+		this.Endereco = Endereco;
+	}
+	public String getTel(){
+		return Tel;
+	}
+	public void setTel(String Tel){
+		this.Tel = Tel;
+	}
+	public String getEmail(){
+		return Email;
+	}
+	public void setEmail(String Email){
+		this.Email = Email;
+	}
+	public String getRG(){
+		return RG;
+	}
+	public void setRG(String RG){
+		this.RG = RG;
+	}
+	public void apresentarPessoa(){
+		System.out.println("Nome: " + this.getNome());
+		System.out.println("Endereço: " + this.getEndereco());
+		System.out.println("Telefone: " + this.getTel());
+		System.out.println("Email: " + this.getEmail());
+		System.out.println("RG: " + this.getRG());
+	}
+}
+--------------------------------------------------------------------------
+import java.util.*;
+public class Principal {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		pessoa p1 = new pessoa("Endryl","Etec Ct","96432864","endryl.contato@gmail.com","354684861");	
+		p1.apresentarPessoa();
+		System.out.println("--------------------------------------------------------------");
+		pessoa p2 = new pessoa("Yuri","Etec Ct","96432864","bolivia@gmail.com","354684861");	
+		p2.apresentarPessoa();
+		System.out.println("--------------------------------------------------------------");
+		pessoa p3 = new pessoa("João","Etec Ct","96432864","Cearence@gmail.com","354684861");	
+		p3.apresentarPessoa();
+		System.out.println("--------------------------------------------------------------");
+		pessoa p4 = new pessoa("Davi","Etec Ct","96432864","YasuoPassivaSecreta0/10@gmail.com","354684861");	
+		p4.apresentarPessoa();
+	}
+}
+-------------------------------------------------------------------------------
+EXER 6
+class carros {
+	public String cor;
+	public String placa;
+	public String modelo;
+	
+	public carros(String cor, String placa, String modelo) {
+		this.cor = cor;
+		this.placa = placa;
+		this.modelo = modelo;
+	}
+	public String getcor(){
+		return cor;
+	}
+	public void setcor(String cor){
+		this.cor = cor;
+	}
+	public String getplaca(){
+		return placa;
+	}
+	public void setplaca(String placa){
+		this.placa = placa;
+	}
+	public String getmodelo(){
+		return modelo;
+	}
+	public void setmodelo(String modelo){
+		this.modelo = modelo;
+	}
+	public void apresentarcarro(){
+		System.out.println("Cor: " + this.getcor());
+		System.out.println("Placa: " + this.getplaca());
+		System.out.println("Modelo: " + this.getmodelo());
+	}
+}
+
+-------------------------------------------------------------------------------
+public class motos {
+	protected String placa;
+	protected String cor;
+	protected String modelo;
+	
+	public motos(String placa, String cor, String modelo) {
+		this.placa = placa;
+		this.cor = cor;
+		this.modelo = modelo;
+	}
+	public String getplaca(){
+		return placa;
+	}
+	public void setplaca(String placa){
+		this.placa = placa;
+	}
+	public String getcor(){
+		return cor;
+	}
+	public void setcor(String cor){
+		this.cor = cor;
+	}
+	public String getmodelo(){
+		return modelo;
+	}
+	public void setmodelo(String modelo){
+		this.modelo = modelo;
+	}
+	public void apresentarmoto(){
+		System.out.println("Placa: " + this.getplaca());
+		System.out.println("Cor: " + this.getcor());
+		System.out.println("Modelo: " + this.getmodelo());
+}
+
+	
+}
+-------------------------------------------------------------------------------
+public class caminhao {
+	private String modelo;
+	private String placa;
+	private String cor;
+	
+	public caminhao(String modelo, String placa, String cor) {
+		this.modelo = modelo;
+		this.placa = placa;
+		this.cor = cor;
+	}
+	public String getmodelo(){
+		return modelo;
+	}
+	public void setmodelo(String modelo){
+		this.modelo = modelo;
+	}
+	public String getplaca(){
+		return placa;
+	}
+	public void setplaca(String placa){
+		this.placa = placa;
+	}
+	public String getcor(){
+		return cor;
+	}
+	public void setcor(String cor){
+		this.cor = cor;
+	}
+	public void apresentarcaminhao(){
+		System.out.println("Modelo: " + this.getmodelo());
+		System.out.println("Placa: " + this.getplaca());
+		System.out.println("Cor: " + this.getcor());
+}
+
+}
+
+-------------------------------------------------------------------------------
+import java.util.*;
+public class principal {
+	public static void main(String[] args) {
+		carros p1 = new carros("branco", null, null);	
+		p1.apresentarcarro();
+		System.out.println("--------------------------------------------------------------");
+		motos p2 = new motos("9876543", null, null);	
+		p2.apresentarmoto();
+		System.out.println("--------------------------------------------------------------");
+		caminhao p3 = new caminhao("Mercedes-Benz", null, null);	
+		p3.apresentarcaminhao();
+		System.out.println("--------------------------------------------------------------");
+		
+	}
+}
+-------------------------------------------------------------------------------
+
+
+
+
+
+
+
