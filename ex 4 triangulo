@@ -1,0 +1,46 @@
+package exercicios;
+import java.util.*;
+public class Apresentacao {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		double b, h;
+		TrianguloRetangulo Calculo = new TrianguloRetangulo();
+		System.out.println("Qual a base do Retângulo: ");
+		b = in.nextDouble();
+		System.out.println("Qual a altura do Retângulo: ");
+		h = in.nextDouble();
+		Calculo.b = b;
+		Calculo.h = h;
+		Calculo.area1();
+		System.out.println("A area do retângulo é: "+ Calculo.area1);
+		Calculo.area1();
+		
+		System.out.println("Qual a base do Triangulo: ");
+		b = in.nextDouble();
+		System.out.println("Qual a altura do Triangulo: ");
+		h = in.nextDouble();
+		Calculo.b = b;
+		Calculo.h = h;
+		Calculo.area2();
+		System.out.println("A area do triangulo é: "+ Calculo.area2);
+		Calculo.area2();
+	}
+		
+}
+
+package exercicios;
+public class TrianguloRetangulo {
+	double area1;
+	double area2;
+	double b;
+	double h;
+	
+	void area1(){
+		area1 = b * h;
+	}
+	void area2(){
+		area2 = b * h / 2 ;
+	}
+	//A = b . h
+	//b*h/2
+}
