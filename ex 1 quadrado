@@ -1,0 +1,42 @@
+package Area;
+public class Conta {
+	double B;
+		//Base do quadrado.
+	double Al;
+		//Altura do Quadrado.
+	double area;
+		//Variavel para guardar o calculo de Base * Altura.
+		//Declarando as variaveis.
+	
+	void area(){
+		area = B * Al;
+		//Dentro deste método, estou fazendo o cálculo da Area do quadrado .
+	}
+}
+
+package Area;
+public class Apresentar {
+	public static void main(String[] args) {
+		Conta Quadrado1 = new Conta();
+			//No trecho acima estou criando minha 1º instancia.
+		Quadrado1.Al = 4.5;
+			//Estou acrescentando um valor a minha variavel.
+		Quadrado1.B = 9.5;
+			//Estou acrescentando um valor a minha variavel.
+		Quadrado1.area();
+		
+		System.out.println("A área do Quadrado 1 é: " + Quadrado1.area);
+			//Apresentando o Resultado do calculo.
+		
+		Conta Quadrado2 = new Conta();
+			//No trecho acima estou criando minha 2º Instancia.
+		Quadrado2.Al = 4.6;
+			//Estou acrescentando um valor a minha variavel.
+		Quadrado2.B = 10;
+			//Estou acrescentando um valor a minha variavel.
+		Quadrado2.area();
+		
+		System.out.println("A área do Quadrado 2 é: " + Quadrado2.area);
+			//Apresentando o Resultado do calculo.
+	}
+}
