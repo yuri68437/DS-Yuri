@@ -1,0 +1,44 @@
+
+package exercicios;
+import java.util.Scanner;
+public class idades {
+	public static void main(String[] args) {
+		idade calculo = new idade();
+		Scanner in = new Scanner(System.in);
+		String nome;
+		String Sobrenome;
+		int at, an;
+		System.out.println("Digite seu nome: ");
+		nome=in.next();
+		System.out.println("Digite seu sobrenome");
+		Sobrenome=in.next();
+		System.out.println("Digite ano atual: ");
+		at=in.nextInt();
+		System.out.println("Digite ano de nascimento: ");
+		an=in.nextInt();
+		
+		calculo.at = at;
+		calculo.an = an;
+		calculo.idade();
+		
+		System.out.println("Você tem "+calculo.idade+" anos e seu nome completo é "+calculo.nomeCompleto());
+	}
+}
+
+package exercicios;
+
+public class idade {
+	int idade;
+	String nome;
+	String Sobrenome;
+	int at;
+	int an;
+	
+	void idade(){
+		idade = at - an;
+	}
+	String nomeCompleto(){
+		String n = nome + Sobrenome;
+		return n;
+	}
+}
