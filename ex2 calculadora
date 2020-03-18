@@ -1,0 +1,51 @@
+package exercicios;
+public class calculation {
+	double a;
+	double b;
+	double Soma;
+	double Subtracao;
+	double Multiplicacao;
+	double Divisao;
+	
+		void Divisao (){	
+			Divisao = a / b;
+		}
+		void Multiplicacao (){
+			Multiplicacao = a * b;
+		}
+		void Subtracao (){	
+			Subtracao = a - b;
+		}
+		void Soma (){
+			Soma = a + b;
+	}
+}
+
+package exercicios;
+import java.util.*;
+public class Calculadora {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		calculation Calcular = new calculation();
+		double b, a;
+		
+		System.out.println("Digite o primeiro parâmetro: ");
+		a = in.nextDouble();
+		
+		System.out.println("Digite o segundo parâmetro: ");
+		b = in.nextDouble();
+		
+		Calcular.a = a;
+		Calcular.b = b;
+		Calcular.Soma();
+		Calcular.Subtracao();
+		Calcular.Multiplicacao();
+		Calcular.Divisao();
+		
+		System.out.println(Calcular.a+" + "+Calcular.b+" = "+Calcular.Soma);
+		System.out.println(Calcular.a+" - "+Calcular.b+" = "+Calcular.Subtracao);
+		System.out.println(Calcular.a+" * "+Calcular.b+" = "+Calcular.Multiplicacao);
+		System.out.println(Calcular.a+" / "+Calcular.b+" = "+Calcular.Divisao);
+		
+	}
+}
