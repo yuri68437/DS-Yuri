@@ -1,0 +1,80 @@
+package exercicios;
+public class Funcionarios {
+	public static void main(String[] args) {
+		 salario F1 = new  salario();
+		F1.Nome = "Pedro";
+		F1.SB = 3891.05;
+		F1.Imposto = 636.13;
+		F1.sL();
+		F1.aS(200);
+			//Acrescentando dados dentro das váriaveis.
+		
+		System.out.println("O sálario Líquido de " + F1.Nome + " é de: " + F1.sL + " e seu sálario com o aumento vai ficar: "+ F1.aU);
+			//Apresentando os Resultados dos calculos dentro dos métodos na class Funcionario.
+		
+		salario F2 = new salario();
+		F2.Nome = "Vagner";
+		F2.SB = 5000;
+		F2.Imposto = 869.36;
+		F2.sL();
+		F2.aS(300);
+			//Acrescentando dados dentro das váriaveis.
+		
+		System.out.println("O sálario Líquido de " + F2.Nome + " é de: " + F2.sL + " e seu sálario com o aumento vai ficar: "+ F2.aU);
+			//Apresentando os Resultados dos calculos dentro dos métodos na class Funcionario.
+	}
+}
+
+package exercicios;
+public class salario {
+	String Nome;
+		//nome do Funcionario.
+	double SB;
+		//Sálario Bruto do Funcionario.
+	double Imposto;
+		//Imposto de renda do Funcionario.
+	double sL;
+		//Sálario Líquido do Funcionario.
+	double aU;
+		//Aumento do Funcionario.
+	
+	void sL(){
+		if(SB < 1903.98){
+			if(Imposto == 0){
+				sL = SB - Imposto;
+			}else{
+				System.out.println("Seu valor do sálario ou valor do imposto está errado.");
+			}
+		}else if(SB >= 1903.98 && SB <= 2826.65){
+			if(Imposto == 142.80){
+				sL = SB - Imposto;
+			}else{
+				System.out.println("Seu valor do sálario ou valor do imposto está errado.");
+			}
+		}else if(SB > 1903.98 && SB <= 3751.05){
+			if(Imposto == 354.80){
+				sL = SB - Imposto;
+			}else{
+				System.out.println("Seu valor do sálario ou valor do imposto está errado.");
+			}
+		}else if(SB > 3751.05 && SB <= 4664.68){
+			if(Imposto == 636.13){
+				sL = SB - Imposto;
+			}else{
+				System.out.println("Seu valor do sálario ou valor do imposto está errado.");
+			}
+		}else if(SB > 4664.68){
+			if(Imposto == 869.36){
+				sL = SB - Imposto;
+			}else{
+				System.out.println("Seu valor do sálario ou valor do imposto está errado.");
+			}
+		}
+	}
+		//Método para calcular o valor do sálario Líquido com o calculo: Sálario Bruto - Imposto.
+	
+	void aS(double aS){
+		aU = sL + aS;
+	}
+		//Método criado com uma codição declarando uma váriavel chamada Aumento Sálario.
+}
